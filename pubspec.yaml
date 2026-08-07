@@ -1,0 +1,31 @@
+name: flutter_homely
+description: >-
+  Homely - a smart-home control panel. Toggle lights and locks, dial in
+  thermostats, apply scenes, manage automations, and track room-by-room
+  energy usage, all from one app.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.4.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # State management. HomeRepository is injected through a Riverpod Provider
+  # so the UI layer never talks to shared_preferences directly.
+  flutter_riverpod: ^2.6.0
+
+  # Local persistence for device state, automation enabled flags, and energy
+  # samples (stored as JSON).
+  shared_preferences: ^2.3.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
